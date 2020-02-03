@@ -7,16 +7,21 @@
       <span class="iconfont">&#xe632;</span>
       search
     </div>
-    <div class="header-right">
-      city
-      <span class="iconfont arrow-icon">&#xe64a;</span>
-    </div>
+    <router-link to="/city">
+      <div class="header-right">
+        {{city}}
+        <span class="iconfont arrow-icon">&#xe64a;</span>
+      </div>
+    </router-link>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HomeHeader'
+  name: 'HomeHeader',
+  props: {
+    city: String
+  }
 }
 
 </script>
@@ -44,6 +49,7 @@ export default {
       color: #ccc
       border-radius: .1rem
     .header-right
+      color: #fff
       width: 1.24rem
       float: right
       text-align: center

@@ -66,6 +66,7 @@
 <script>
 export default {
   name: 'HomeIcon',
+  props: ['iconList'],
   data () {
     return {
       imgList: [
@@ -85,7 +86,7 @@ export default {
   computed: {
     pages () {
       const pages = []
-      this.imgList.forEach((item, index) => {
+      this.iconList.forEach((item, index) => {
         const page = Math.floor(index / 8)
         if (!pages[page]) {
           pages[page] = []
